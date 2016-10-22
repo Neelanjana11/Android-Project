@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:text="SMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSms"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btnToggle"
+        android:layout_alignStart="@+id/btnToggle"
+        android:layout_marginBottom="81dp"
+        android:layout_alignRight="@+id/btnToggle"
+        android:layout_alignEnd="@+id/btnToggle"
+        android:onClick="LaunchActivity"/>
+
+    <Button
+        android:text="Benchmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBenchmark"
+        android:layout_weight="1"
+        android:layout_marginTop="77dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        tools:text="Benchmark Algorithm"
+        android:onClick="LaunchActivity"/>
+
+    <Button
+        android:text="Toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnToggle"
+        android:layout_weight="1"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/btnBenchmark"
+        android:layout_alignStart="@+id/btnBenchmark"
+        android:layout_alignRight="@+id/btnBenchmark"
+        android:layout_alignEnd="@+id/btnBenchmark"
+        android:onClick="LaunchActivity"/>
+</RelativeLayout>
