@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/seekBar"
 
-        android:layout_above="@+id/button3"
+        android:layout_above="@+id/btnStop"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="19dp" />
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pause"
-        android:id="@+id/button2"
+        android:id="@+id/btnPause"
         android:layout_marginBottom="217dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -47,11 +47,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Play"
-        android:id="@+id/button3"
+        android:id="@+id/btnStop"
 
 
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
+        android:layout_alignBaseline="@+id/btnPause"
+        android:layout_alignBottom="@+id/btnPause"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -83,6 +83,6 @@
         android:text="Small Text"
         android:id="@+id/textView2"
         android:layout_alignBottom="@+id/textView4"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2" />
+        android:layout_alignLeft="@+id/btnPause"
+        android:layout_alignStart="@+id/btnPause" />
 </RelativeLayout>

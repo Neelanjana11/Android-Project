@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import java.util.concurrent.TimeUnit;
 
@@ -32,8 +33,8 @@ public class RawAudioActivity extends Activity {
         setContentView(R.layout.activity_raw_audio_layout);
 
         b1 = (Button) findViewById(R.id.button);
-        b2 = (Button) findViewById(R.id.button2);
-        b3=(Button)findViewById(R.id.button3);
+        b2 = (Button) findViewById(R.id.btnPause);
+        b3=(Button)findViewById(R.id.btnStop);
 
         tx1=(TextView)findViewById(R.id.textView2);
         tx2=(TextView)findViewById(R.id.textView3);
@@ -144,27 +145,5 @@ public class RawAudioActivity extends Activity {
             myHandler.postDelayed(this, 100);
         }
     };
-
- /*   @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-
-        if (id == R.id.activit) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }*/
+    
 }
