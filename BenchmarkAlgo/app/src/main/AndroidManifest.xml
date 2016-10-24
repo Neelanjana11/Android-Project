@@ -18,7 +18,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Benchmark Algo"
+        android:label="My Android App"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
@@ -100,12 +100,13 @@
                 <action android:name="android.intent.action.SEND" />
                 <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
                 <data android:mimeType="image/*" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ViewImageActivity">
+        </activity-->
+        <!--activity android:name=".ViewImageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -128,15 +129,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".InternalExternalAudioActivity">
+        </activity-->
+        <!--activity android:name=".InternalExternalAudioActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".NotificationMainActivity">
+        </activity-->
+        <activity android:name=".NotificationMainActivity"
+            android:label="Notification">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -151,7 +153,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".NotificationMainActivity" />
         </activity>
-        <activity android:name=".ToggleWifiActivity">
+        <!--activity android:name=".ToggleWifiActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -171,14 +173,24 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity-->
+        </activity>
         <activity android:name=".VideoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity-->
+        <!--activity android:name=".AlarmActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+
+        <receiver android:name=".AlarmBroadcastActivity" >
+        </receiver-->
     </application>
 
 </manifest>

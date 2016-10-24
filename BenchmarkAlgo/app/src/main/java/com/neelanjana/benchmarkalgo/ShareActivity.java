@@ -18,11 +18,12 @@ import java.io.IOException;
 
 
 public class ShareActivity extends AppCompatActivity {
-   public String image;
+    private ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_share_layout);
 
 
         Bitmap bm = null;
@@ -33,12 +34,12 @@ public class ShareActivity extends AppCompatActivity {
         Uri uri = sharingIntent.getData();
 
         sharingIntent.putExtra(Intent.EXTRA_STREAM, uri);
-        image = sharingIntent.getStringExtra("image");
+    //    image = sharingIntent.getStringExtra("image");
         startActivity(new Intent(this,ViewImageActivity.class));
         //   ivImage.setVisibility(View.VISIBLE);
             Uri imgUri = sharingIntent.getParcelableExtra(Intent.EXTRA_STREAM);
         //    ivImage.setImageURI(imgUri);
-        ViewImageActivity.startActivity(image,imgUri);
+   //     ViewImageActivity.startActivity(image,imgUri);
     }
 
 
