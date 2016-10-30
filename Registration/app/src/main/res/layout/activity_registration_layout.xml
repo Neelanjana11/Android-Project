@@ -1,18 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="561dp">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_registration_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.neelanjana.registration.RegistrationActivity">
+    tools:context="com.neelanjana.registration.RegistrationActivity"
+    android:weightSum="1"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_marginLeft="15dp">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical|center_horizontal|center">
+
+            <TextView
+                android:text="REGISTRATION PAGE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textStyle="normal|bold"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="?attr/colorPrimaryDark" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="*All the fields are mandatory"
+                android:gravity="left"
+                tools:textColor="@android:color/holo_red_dark"
+                android:textStyle="italic"
+                android:textSize="12sp"
+                android:id="@+id/tvMandatory"
+                android:textColor="@android:color/holo_red_dark" />
+        </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                <EditText
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/etFname"
+                    android:hint="First Name"/>
+
+            <EditText
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Last Name"
+                android:ems="10"
+                android:id="@+id/etLname"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="15dp" />
+
+            </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+                 <EditText
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:inputType="date"
+                     android:ems="2"
+                     android:hint="dd"
+                     android:id="@+id/etDate" />
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center_vertical|center_horizontal|center"
+                     android:text="-"/>
+
+                 <EditText
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:inputType="number"
+                     android:ems="2"
+                     android:hint="mm"
+                     android:id="@+id/etMonth" />
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center_vertical|center_horizontal|center"
+
+                     android:text="-"/>
+
+                 <EditText
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:ems="4"
+                     android:hint="yyyy"
+                     android:id="@+id/etYear"/>
+
+             </LinearLayout>
+
+                <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                 </LinearLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="4"
+                android:hint="Full Address"
+                android:inputType="textMultiLine"
+                android:id="@+id/etAddress"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:elevation="1dp"
+                    android:id="@+id/etPhone"
+                    android:hint="Mobile No"
+                    android:layout_weight="1.42" />
+
+                <EditText
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:hint="Email-id"
+                    android:id="@+id/etEmail" />
+
+                <EditText
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/etPswd"
+                    android:hint="Enter Your Password"/>
+
+                <EditText
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/etRePswd"
+                    android:hint="Re-enter the password"/>
+
+
+                <TextView
+                    android:text="Select your Gender :"
+                    android:layout_width="235dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/textView2"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold"
+                    android:textColor="@android:color/black"
+                    android:gravity="bottom|fill" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="119dp"
+                    android:id="@+id/rgButton">
+
+                    <RadioButton
+                        android:text="Male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbMale"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="Female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbFemale"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="Others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbOthers"
+                        android:layout_weight="1" />
+
+
+                </RadioGroup>
+
+            <Button
+                android:text="Submit"
+                android:layout_width="252dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSubmit"
+                android:gravity="center"
+                tools:textStyle="normal|bold"
+                tools:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:onClick="register"/>
+
+
+        </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_below="@+id/textDisplay"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/benchmark_activity_layout"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.neelanjana.benchmarkalgo.Benchmark_activity"
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <EditText
+        android:inputType="textPersonName"
+        android:ems="5"
+        android:id="@+id/textSize"
+        android:textColor="?android:attr/editTextColor"
+        tools:textColor="@android:color/black"
+        android:textStyle="bold"
+        tools:textSize="8sp"
+        tools:layout_width="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        tools:paddingTop="50dp"
+        android:paddingBottom="10dp"
+        android:layout_alignTop="@+id/textView6"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Generate Array"
+        android:layout_width="match_parent"
+        android:textSize="8sp"
+        android:textColor="@android:color/holo_green_dark"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:textColorLink="?attr/colorPrimary"
+        android:textColorHighlight="@android:color/background_light"
+        android:id="@+id/generateButton"
+        android:onClick="generateArray"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:layout_height="30dp"
+        android:layout_below="@+id/rgGroup1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textDisplay"
+        android:textSize="10sp"
+        android:gravity="center"
+        tools:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/generateButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/rgGroup1"
+        android:text="rgGroup"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/textSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:text="Best Case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBest"
+
+            tools:textSize="10sp"
+            android:textStyle="normal|bold"
+            android:layout_weight="1"
+            tools:textColor="@android:color/holo_orange_dark"
+            android:textColor="@android:color/holo_orange_dark" />
+
+        <RadioButton
+            android:text="Average Case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAvg"
+            android:layout_weight="1"
+            android:textColor="@android:color/holo_orange_dark"
+            tools:textSize="10sp"
+            android:textStyle="normal|bold"
+            android:checked="true" />
+
+        <RadioButton
+            android:text="Worst Case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnWorst"
+            android:layout_weight="1"
+            tools:textColor="@android:color/holo_orange_dark"
+            android:textStyle="normal|bold"
+            tools:textSize="10sp"
+            android:textColor="@android:color/holo_orange_dark" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:text="Enter size of the Array :"
+        android:layout_width="wrap_content"
+        android:id="@+id/textView6"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:text="Choose Complexity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textComplexity"
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/textSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <GridLayout
+        android:columnCount="2"
+        android:rowCount="10"
+        tools:columnCount="3"
+
+        tools:layout_height="wrap_content"
+        android:id="@+id/grid"
+        tools:layout_width="wrap_content"
+        android:layout_width="wrap_content"
+
+        android:layout_height="300dp"
+        android:layout_below="@+id/textDisplay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+
+        <TextView
+            android:text=" Time Taken"
+            android:textSize="10dp"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:id="@+id/textView19"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            tools:textColor="@android:color/black"
+            tools:gravity="center"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="Choose Algorithm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView17"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textSize="10sp"
+            tools:textSize="10sp"
+            tools:textColor="@android:color/black"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="Bubble Sort"
+            android:textSize="8sp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:id="@+id/btnBubble"
+            android:onClick="sort"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp" />
+
+        <TextView
+            android:textSize="8sp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:id="@+id/textBubble" />
+
+        <Button
+            android:text="Selection Sort"
+            android:textSize="8sp"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:id="@+id/btnSelection"
+            android:onClick="sort"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp" />
+
+        <TextView
+            android:textSize="8sp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:id="@+id/textSelection" />
+
+        <Button
+            android:text="Insertion Sort"
+            android:textSize="8sp"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:id="@+id/btnInsertion"
+            android:onClick="sort"
+            android:textColor="@color/colorPrimaryDark"
+            tools:textSize="8sp"
+            android:layout_height="32dp" />
+
+        <TextView
+            android:textSize="8sp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:id="@+id/textInsertion" />
+
+        <Button
+            android:text="Quick Sort"
+            android:textSize="8sp"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:id="@+id/btnQuick"
+            android:onClick="sort"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            tools:textSize="8sp" />
+
+        <TextView
+            android:textSize="8sp"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:id="@+id/textQuick" />
+
+        <Button
+            android:text="Merge Sort"
+            android:textSize="8sp"
+            android:layout_column="0"
+            android:layout_row="5"
+            android:id="@+id/btnMerge"
+            android:onClick="sort"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            tools:textSize="8sp"
+            android:layout_height="32dp" />
+
+        <TextView
+            android:textSize="8sp"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:id="@+id/textMerge" />
+
+        <Button
+            android:text="Heap Sort"
+            android:textSize="8sp"
+            android:layout_column="0"
+            android:layout_row="6"
+            android:id="@+id/btnHeap"
+            android:onClick="sort"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp" />
+
+        <TextView
+            android:textSize="8sp"
+            android:layout_row="6"
+            android:layout_column="1"
+            android:id="@+id/textHeap" />
+
+        <Button
+            android:text="Radix Sort"
+            android:textSize="8sp"
+            android:layout_column="0"
+            android:layout_row="7"
+            android:id="@+id/btnRadix"
+            android:onClick="sort"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp" />
+
+        <TextView
+            android:textSize="8sp"
+            android:layout_row="7"
+            android:layout_column="1"
+            android:id="@+id/textRadix"
+            android:layout_width="wrap_content" />
+
+
+        <Button
+            android:text="BenchMark All"
+            android:textSize="10sp"
+            android:layout_column="0"
+            android:layout_row="8"
+            android:layout_width="143dp"
+            android:id="@+id/btnBenchmark"
+            android:layout_height="33dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/textSize"
+            android:layout_toStartOf="@+id/textSize"
+            android:layout_marginRight="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="13dp"
+            tools:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="sort"/>
+
+        <Button
+            android:text="Reset All"
+            android:textSize="10sp"
+            android:layout_column="1"
+            android:layout_row="8"
+            android:layout_height="33dp"
+            android:id="@+id/btnReset"
+            tools:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="sort"
+            android:layout_width="141dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="13dp"
+            android:textAlignment="center" />
+    </GridLayout>
+
+
+</RelativeLayout>
+
+</ScrollView>
+

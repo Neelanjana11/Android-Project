@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_img_animation_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.neelanjana.benchmarkalgo.ImgAnimationActivity"
+    android:background="?attr/colorAccent">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/durga"
+        android:id="@+id/imageView"
+        android:layout_marginBottom="330dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="ZOOM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="207dp"
+        android:id="@+id/btnZoom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/black"
+        android:textColor="@android:color/background_light"
+        android:onClick="zoom"
+        android:textStyle="italic"
+        tools:textSize="18sp" />
+
+    <Button
+        android:text="ROTATE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRotate"
+        android:background="@android:color/black"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/btnZoom"
+        android:layout_alignBottom="@+id/btnZoom"
+        android:layout_centerHorizontal="true"
+        android:onClick="rotate"
+        android:textStyle="italic"
+        tools:textSize="18sp"/>
+
+    <Button
+        android:text="MOVE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMove"
+        android:background="@android:color/black"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/btnRotate"
+        android:layout_alignBottom="@+id/btnRotate"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:onClick="move"
+        android:textStyle="italic"
+        tools:textSize="18sp"/>
+
+    <Button
+        android:text="SHAKE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnShake"
+        android:background="@android:color/black"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/btnRotate"
+        android:layout_toLeftOf="@+id/btnAlpha"
+        android:layout_toStartOf="@+id/btnAlpha"
+        android:layout_marginRight="34dp"
+        android:layout_marginEnd="34dp"
+        android:onClick="shake"
+        android:textStyle="italic"
+        tools:textSize="18sp"/>
+
+    <Button
+        android:text="ALPHA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAlpha"
+        android:background="@android:color/black"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/btnShake"
+        android:layout_alignBottom="@+id/btnShake"
+        android:layout_alignRight="@+id/btnMove"
+        android:layout_alignEnd="@+id/btnMove"
+        android:layout_marginRight="53dp"
+        android:layout_marginEnd="53dp"
+        android:onClick="alpha"
+        android:textStyle="italic"
+        tools:textSize="18sp"/>
+
+
+</RelativeLayout>
