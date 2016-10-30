@@ -8,6 +8,7 @@ import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ShakeSensorActivity extends AppCompatActivity implements SensorEventListener {
     private SensorManager mSensorManager;
@@ -33,10 +34,16 @@ public class ShakeSensorActivity extends AppCompatActivity implements SensorEven
         // The light sensor returns a single value.
         // Many sensors return 3 values, one for each axis.
         float x = event.values[0];
-        float y = event.values[1];
-        float z = event.values[2];
+        float y = event.values[0];
+        float z = event.values[0];
 
         tvResult.setText("x = "+x+" y = "+y+"z = "+z);
+        if(x>60 && x<70){
+            Toast.makeText(getBaseContext(),"Top",Toast.LENGTH_SHORT).show();
+        }
+        else if(x<60 && x>50){
+            Toast.makeText(getBaseContext(),"Right",Toast.LENGTH_SHORT).show();
+        }
         // Do something with this sensor value.
     }
 
