@@ -9,7 +9,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_registration_layout"
+    android:id="@+id/llReg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.neelanjana.registration.RegistrationActivity"
@@ -37,7 +37,7 @@
                 android:textStyle="normal|bold"
                 android:textSize="18sp"
                 android:gravity="center"
-                android:textColor="?attr/colorPrimaryDark" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -56,6 +56,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
                 <EditText
+                    android:text=""
                 android:layout_width="161dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -64,6 +65,7 @@
                     android:hint="First Name"/>
 
             <EditText
+                android:text=""
                 android:layout_width="163dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -113,6 +115,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:ems="4"
+                     android:inputType="number"
                      android:hint="yyyy"
                      android:id="@+id/etYear"/>
 
@@ -150,7 +153,7 @@
                     android:hint="Email-id"
                     android:id="@+id/etEmail" />
 
-                <EditText
+                <!--EditText
                     android:layout_width="227dp"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
@@ -164,7 +167,7 @@
                     android:inputType="textPassword"
                     android:ems="10"
                     android:id="@+id/etRePswd"
-                    android:hint="Re-enter the password"/>
+                    android:hint="Re-enter the password"/-->
 
 
                 <TextView
@@ -208,16 +211,47 @@
 
             <Button
                 android:text="Submit"
-                android:layout_width="252dp"
-                android:layout_height="wrap_content"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
                 android:id="@+id/btnSubmit"
-                android:gravity="center"
+                android:gravity="center_vertical|center_horizontal|center"
                 tools:textStyle="normal|bold"
                 tools:textSize="18sp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginRight="40dp"
-                android:onClick="register"/>
+                android:onClick="register"
+                android:textColor="@android:color/background_light"
+                android:background="@color/colorPrimary" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:orientation="horizontal"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Already a member.."
+                    android:layout_width="159dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvClick"
+                    android:gravity="center"
+                    android:layout_marginLeft="50dp"/>
+
+                <Button
+                    android:text="Click Here"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:id="@+id/btnClick"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/background_light" />
+            </LinearLayout>
 
         </LinearLayout>
 
