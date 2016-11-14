@@ -18,6 +18,7 @@
         android:id="@+id/etPswd"
         android:layout_marginTop="111dp"
         android:layout_alignParentTop="true"
+        android:hint="Enter Password"
         android:layout_centerHorizontal="true" />
 
     <EditText
@@ -28,7 +29,8 @@
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/etPswd"
         android:layout_alignStart="@+id/etPswd"
-        android:id="@+id/etChngPswd" />
+        android:id="@+id/etChngPswd"
+        android:hint="Confirm Password"/>
 
     <Button
         android:text="Submit"

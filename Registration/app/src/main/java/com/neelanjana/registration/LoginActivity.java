@@ -24,8 +24,10 @@ public class LoginActivity extends AppCompatActivity {
     String email;
     String password;
     SharedPreferences sharedPreferences;
-    String uEmail = null;
-    String uPassword = null;
+    SharedPreferences pref;
+    public static String uEmail;
+    public static String uPassword;
+    String mail = null;
     public static final String IEmail = "EMAIL";
     public static final String IPswd = "PSWD";
     SessionManager session;
@@ -36,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login_layout);
 
         sharedPreferences = getSharedPreferences("Reg",MODE_PRIVATE);
+        pref = getSharedPreferences("Log",MODE_PRIVATE);
         session = new SessionManager(getApplicationContext());
 
         etMail = (EditText) findViewById(R.id.etMail);
@@ -48,12 +51,15 @@ public class LoginActivity extends AppCompatActivity {
         uEmail = sharedPreferences.getString(RegistrationActivity.Email, null);
         uPassword = sharedPreferences.getString(RegistrationActivity.Password, null);
 
+
             btnLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+            //        Toast.makeText(getBaseContext(), uEmail, Toast.LENGTH_SHORT).show();
+            //        Toast.makeText(getBaseContext(), uPassword, Toast.LENGTH_SHORT).show();
                     email = etMail.getText().toString();
                     password = etPswd.getText().toString();
-
+                    mail = email;
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString(IEmail, email);
                     editor.putString(IPswd, password);

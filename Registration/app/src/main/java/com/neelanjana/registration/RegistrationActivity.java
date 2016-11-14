@@ -269,6 +269,8 @@
                         Intent i = new Intent(getApplicationContext(), EmailSplashActivity.class);
                         startActivity(i);
                     }else if((email).equals(log.uEmail)==false){
+                    //    Toast.makeText(getBaseContext(),log.uEmail, Toast.LENGTH_SHORT).show();
+                    //    Toast.makeText(getBaseContext(), email, Toast.LENGTH_SHORT).show();
                         Toast.makeText(getBaseContext(), "You have changed your Email-id", Toast.LENGTH_SHORT).show();
                         shared();
                         sendEmail();
