@@ -6,6 +6,6 @@ package com.neelanjana.registration;
 
 public class Config extends javax.mail.Authenticator {
 
-    public static final String EMAIL ="rcneelanjana@gmail.com";
-    public static final String PASSWORD ="neelujanu";
+    public static final String EMAIL ="";
+    public static final String PASSWORD ="";
 }
